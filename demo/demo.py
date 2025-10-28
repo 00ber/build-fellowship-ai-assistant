@@ -356,7 +356,7 @@ def run_full_demo():
 def run_interactive():
     """Run interactive CLI mode."""
 
-    cli = DataAnalyticsCLI(llm_provider=openai)
+    cli = DataAnalyticsCLI(llm_provider="openai")
     cli.run()
 
 
