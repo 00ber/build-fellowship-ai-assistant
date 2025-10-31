@@ -353,10 +353,10 @@ def run_full_demo():
     console.print(f"[dim]The agent completed all tasks using the ReAct pattern[/dim]")
 
 
-def run_interactive():
+def run_interactive(provider: str = "openai"):
     """Run interactive CLI mode."""
 
-    cli = DataAnalyticsCLI(llm_provider="openai")
+    cli = DataAnalyticsCLI(llm_provider=provider)
     cli.run()
 
 
@@ -402,7 +402,7 @@ Examples:
             run_full_demo()
         else:
             # Default to interactive
-            run_interactive()
+            run_interactive(args.provider)
 
     except KeyboardInterrupt:
         console.print("\n[yellow]Demo interrupted[/yellow]")
