@@ -208,3 +208,5 @@ __marimo__/
 CLAUDE.md
 PLAN.md
 scratchpad
+.planning/
+.DS_Store
