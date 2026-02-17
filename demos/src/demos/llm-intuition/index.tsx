@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import DemoLayout from '../../app/DemoLayout.tsx';
-import Card from '../../components/ui/Card.tsx';
 import { DEMO_REGISTRY } from '../../app/DemoRegistry.ts';
 import SimulatedMode from './components/SimulatedMode.tsx';
+import LiveMode from './components/LiveMode.tsx';
+import { useLiveModeStore } from './store/useLiveModeStore.ts';
 
 type Tab = 'simulated' | 'live';
 
@@ -10,6 +11,15 @@ const entry = DEMO_REGISTRY.find((d) => d.id === 'llm-intuition');
 
 export default function LLMIntuitionDemo() {
   const [activeTab, setActiveTab] = useState<Tab>('simulated');
+  const prevTabRef = useRef<Tab>(activeTab);
+
+  // Cancel live stream when switching away from Live tab
+  useEffect(() => {
+    if (prevTabRef.current === 'live' && activeTab !== 'live') {
+      useLiveModeStore.getState().cancelGeneration();
+    }
+    prevTabRef.current = activeTab;
+  }, [activeTab]);
 
   return (
     <DemoLayout
@@ -47,20 +57,7 @@ export default function LLMIntuitionDemo() {
       {activeTab === 'simulated' ? (
         <SimulatedMode />
       ) : (
-        <div className="max-w-2xl mx-auto mt-12">
-          <Card className="text-center py-12">
-            <div className="text-4xl mb-4">🤖</div>
-            <h3 className="text-lg font-semibold text-text-primary mb-2">
-              Live Mode Coming Soon
-            </h3>
-            <p className="text-sm text-text-secondary max-w-md mx-auto leading-relaxed">
-              This tab will use a real LLM to show the same token prediction
-              concept with actual probabilities from GPT-4o-mini. You'll see how
-              the patterns you explored in the simulated mode translate to a
-              real language model.
-            </p>
-          </Card>
-        </div>
+        <LiveMode />
       )}
     </DemoLayout>
   );
