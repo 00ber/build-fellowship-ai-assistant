@@ -26,16 +26,16 @@ export const DEMO_REGISTRY: DemoEntry[] = [
     instructions: {
       steps: [
         {
-          title: 'Explore the sidebar',
-          description: 'Click on different demos in the left sidebar to navigate between them.',
+          title: 'Start Streaming',
+          description: 'Click the "Start Streaming" button to watch text appear token by token, just like a real LLM generating a response.',
         },
         {
-          title: 'Try the controls',
-          description: 'Use the play, pause, and reset buttons to control demo playback.',
+          title: 'Watch Markdown Render',
+          description: 'Notice how bold text, headers, and code blocks render in real-time as the stream progresses.',
         },
         {
-          title: 'View code examples',
-          description: 'Code blocks show syntax-highlighted snippets relevant to each demo.',
+          title: 'Reset and Replay',
+          description: 'Click "Reset" to clear the output, then replay the streaming to see it again.',
         },
       ],
     },

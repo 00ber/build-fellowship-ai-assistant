@@ -1,81 +1,35 @@
-import { useState, useCallback } from 'react';
 import DemoLayout from '../../app/DemoLayout.tsx';
 import Card from '../../components/ui/Card.tsx';
 import Badge from '../../components/ui/Badge.tsx';
-import CodeBlock from '../../components/demo/CodeBlock.tsx';
-import StepDisplay from '../../components/demo/StepDisplay.tsx';
+import StreamingText from '../../components/demo/StreamingText.tsx';
 import DemoControls from '../../components/demo/DemoControls.tsx';
+import { useStreamingText } from '../../hooks/useStreamingText.ts';
+import { useApiMode } from '../../hooks/useApiMode.ts';
 import { DEMO_REGISTRY } from '../../app/DemoRegistry.ts';
-
-const SAMPLE_CODE = `// Adding a new demo is simple:
-// 1. Create a component in demos/src/demos/my-demo/index.tsx
-// 2. Add an entry to DEMO_REGISTRY in DemoRegistry.ts
-
-import { lazy } from 'react';
-import { Brain } from 'lucide-react';
-
-export const DEMO_REGISTRY: DemoEntry[] = [
-  {
-    id: 'my-demo',
-    title: 'My Demo',
-    subtitle: 'Exploring a concept',
-    icon: Brain,
-    component: lazy(() => import('../demos/my-demo')),
-    ahaStatement: 'The key insight this demo reveals',
-  },
-];`;
-
-const STEPS = [
-  {
-    title: 'Welcome to the Demo Shell',
-    description: 'This placeholder proves the full demo pipeline works: registry, sidebar, routing, layout, and shared components.',
-  },
-  {
-    title: 'Shared Components',
-    description: 'Cards, Badges, CodeBlocks, StepDisplays, and DemoControls are all available for building real demos.',
-  },
-  {
-    title: 'Ready for Content',
-    description: 'Future phases will add real AI demos. Each demo only needs a component file and a registry entry.',
-  },
-];
+import { SAMPLE_STREAMING_RESPONSE } from '../../data/simulated-responses/sample.ts';
 
 const entry = DEMO_REGISTRY.find((d) => d.id === 'placeholder');
 
 export default function PlaceholderDemo() {
-  const [currentStep, setCurrentStep] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const isComplete = currentStep >= STEPS.length;
-
-  const handlePlay = useCallback(() => {
-    setIsPlaying(true);
-    setCurrentStep((prev) => Math.min(prev + 1, STEPS.length));
-    // Auto-pause after advancing
-    setTimeout(() => setIsPlaying(false), 500);
-  }, []);
-
-  const handlePause = useCallback(() => {
-    setIsPlaying(false);
-  }, []);
-
-  const handleReset = useCallback(() => {
-    setCurrentStep(0);
-    setIsPlaying(false);
-  }, []);
+  const { isRealMode } = useApiMode();
+  const { text, isStreaming, isDone, start, cancel, reset } = useStreamingText({
+    simulatedResponse: SAMPLE_STREAMING_RESPONSE,
+    apiPrompt: 'Explain how Large Language Models work, including how they predict the next token and why temperature matters. Use markdown formatting with headers, bold, code blocks, and a blockquote.',
+    apiSystemPrompt: 'You are a helpful AI teacher. Explain concepts clearly with markdown formatting.',
+  });
 
   return (
     <DemoLayout
       title="Welcome"
-      subtitle="Demo shell is working"
+      subtitle="Streaming infrastructure demo"
       instructions={entry?.instructions}
     >
       <div className="max-w-3xl mx-auto space-y-6">
-        {/* Welcome card */}
+        {/* Info card */}
         <Card
           header={
             <div className="flex items-center justify-between">
-              <h3 className="font-semibold text-text-primary">Demo Infrastructure</h3>
+              <h3 className="font-semibold text-text-primary">LLM Streaming Demo</h3>
               <div className="flex gap-2">
                 <Badge variant="success">Active</Badge>
                 <Badge variant="info">Phase 1</Badge>
@@ -84,9 +38,9 @@ export default function PlaceholderDemo() {
           }
         >
           <p className="text-text-secondary text-sm leading-relaxed">
-            This placeholder demo exercises every shared component in the demo shell.
-            It proves the full pipeline works: sidebar navigation, hash-based routing,
-            lazy loading, the DemoLayout with instruction panel, and all reusable components.
+            This demo showcases the streaming infrastructure. Click "Start Streaming" to
+            watch text appear token-by-token with live markdown rendering — just like a
+            real LLM generating a response.
           </p>
           <p className="text-text-secondary text-sm leading-relaxed mt-3">
             <strong className="text-text-primary">Aha moment:</strong>{' '}
@@ -94,28 +48,47 @@ export default function PlaceholderDemo() {
           </p>
         </Card>
 
-        {/* Step display */}
-        <Card header={<h3 className="font-semibold text-text-primary">Progress</h3>}>
-          <StepDisplay steps={STEPS} currentStep={currentStep} />
+        {/* Streaming output */}
+        <Card
+          header={
+            <div className="flex items-center justify-between">
+              <h3 className="font-semibold text-text-primary">Response</h3>
+              {isStreaming && (
+                <span className="text-xs text-primary animate-pulse">Streaming...</span>
+              )}
+              {isDone && (
+                <span className="text-xs text-success">Complete</span>
+              )}
+            </div>
+          }
+        >
+          {text ? (
+            <StreamingText text={text} isStreaming={isStreaming} />
+          ) : (
+            <p className="text-text-secondary text-sm italic">
+              Click "Start Streaming" below to begin.
+            </p>
+          )}
         </Card>
 
         {/* Controls */}
         <DemoControls
-          onPlay={handlePlay}
-          onPause={handlePause}
-          onReset={handleReset}
-          isPlaying={isPlaying}
-          isComplete={isComplete}
+          onPlay={isStreaming ? cancel : start}
+          onPause={cancel}
+          onReset={reset}
+          isPlaying={isStreaming}
+          isComplete={isDone}
         />
 
-        {/* Code example */}
-        <Card header={<h3 className="font-semibold text-text-primary">How to Add a Demo</h3>}>
-          <CodeBlock
-            code={SAMPLE_CODE}
-            language="typescript"
-            title="DemoRegistry.ts"
+        {/* Mode indicator (subtle, for development/instructor use) */}
+        <div className="flex items-center justify-end gap-2 text-xs text-text-secondary opacity-50">
+          <div
+            className={`w-1.5 h-1.5 rounded-full ${
+              isRealMode ? 'bg-emerald-500' : 'bg-indigo-400'
+            }`}
           />
-        </Card>
+          <span>{isRealMode ? 'Live Mode' : 'Simulated Mode'}</span>
+        </div>
       </div>
     </DemoLayout>
   );
