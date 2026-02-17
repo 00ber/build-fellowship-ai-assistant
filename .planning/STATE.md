@@ -10,27 +10,27 @@ See: .planning/PROJECT.md (updated 2026-02-16)
 ## Current Position
 
 Phase: 1 of 6 (Curriculum Foundation + Demo Infrastructure)
-Plan: 2 of 3 in current phase
-Status: Executing
-Last activity: 2026-02-17 — Completed 01-02-PLAN.md (Demo App Shell)
+Plan: 3 of 3 in current phase
+Status: All plans complete — awaiting verification
+Last activity: 2026-02-16 — Completed 01-03-PLAN.md (LLM Streaming Infrastructure)
 
-Progress: [██░░░░░░░░] 11%
+Progress: [██░░░░░░░░] 17%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 2
-- Average duration: 5 min
-- Total execution time: 0.2 hours
+- Total plans completed: 3
+- Average duration: 8 min
+- Total execution time: 0.4 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01 | 2/3 | 10 min | 5 min |
+| 01 | 3/3 | 25 min | 8 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (5 min), 01-02 (5 min)
+- Last 5 plans: 01-01 (5 min), 01-02 (5 min), 01-03 (15 min)
 - Trend: Consistent
 
 *Updated after each plan completion*
@@ -51,6 +51,9 @@ Recent decisions affecting current work:
 - Demo infra: Hash-based routing for zero-dependency simplicity in demo shell
 - Demo infra: DemoRegistry pattern for adding demos (component file + registry entry)
 - Demo infra: Tailwind v3 (not v4) to match established scratchpad theme
+- Streaming: Fetch-based SSE for OpenAI API (no openai npm package) — lightweight bundle
+- Streaming: useStreamingText hook as unified API for all demo streaming
+- Streaming: Hidden "live" keyboard toggle approved for instructor-only features
 
 ### Pending Todos
 
@@ -64,6 +67,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-17 (plan execution)
-Stopped at: Completed 01-02-PLAN.md (Demo App Shell)
+Last session: 2026-02-16 (phase execution)
+Stopped at: Phase 1 all plans complete, awaiting verification
 Resume file: None
