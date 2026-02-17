@@ -13,7 +13,7 @@ This roadmap delivers a revamped 8-week AI agent curriculum through iterative wo
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [ ] **Phase 1: Curriculum Documentation + Demo Infrastructure** - Document existing workshop structure, add narrative arc, build shared demo design system
-- [ ] **Phase 2: Workshop 2 Materials (LLM Fundamentals & Prompt Engineering)** - Polish LLM demo, build Prompt Anatomy + Side-by-side demos, revamp W2 notebook
+- [x] **Phase 2: Workshop 2 Materials (LLM Fundamentals & Prompt Engineering)** - Polish LLM demo, build Prompt Anatomy + Side-by-side demos, revamp W2 notebook (completed 2026-02-17)
 - [ ] **Phase 3: Workshop 3 Materials (Agent Foundations)** - Build Behind the Curtain demo, revamp W3 notebook
 - [ ] **Phase 4: Workshop 4 Materials (Tool Design)** - Build Tool Use demo, revamp W4 notebook
 - [ ] **Phase 5: Workshop 5 Materials (ReAct & Code Agents)** - Polish ReAct demo, build Code Sandbox demo, revamp W5 notebook
@@ -46,7 +46,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. Workshop 2 notebook uses shared Python display utilities for pretty formatted output
   5. Exercise solutions are hidden behind collapsible elements
   6. Instructor can walk through Workshop 2 notebook in 35-40 minutes during live lecture
-**Plans:** 3 plans
+**Plans:** 3/3 plans complete
 - [ ] 02-01-PLAN.md — Migrate and restyle N-gram demo into new demo shell with tab structure
 - [ ] 02-02-PLAN.md — Build Live Mode with logprobs streaming, token picking, system prompt presets
 - [ ] 02-03-PLAN.md — Shared Python display utilities + Workshop 2 notebook revamp
@@ -105,7 +105,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Curriculum Documentation + Demo Infrastructure | 0/TBD | Not started | - |
-| 2. Workshop 2 Materials (LLM Fundamentals & Prompt Engineering) | 0/TBD | Not started | - |
+| 2. Workshop 2 Materials (LLM Fundamentals & Prompt Engineering) | 0/TBD | Complete    | 2026-02-17 |
 | 3. Workshop 3 Materials (Agent Foundations) | 0/TBD | Not started | - |
 | 4. Workshop 4 Materials (Tool Design) | 0/TBD | Not started | - |
 | 5. Workshop 5 Materials (ReAct & Code Agents) | 0/TBD | Not started | - |
