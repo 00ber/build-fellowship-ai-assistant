@@ -5,33 +5,34 @@
 See: .planning/PROJECT.md (updated 2026-02-16)
 
 **Core value:** Every concept students encounter must be immediately intuitive — if a student leaves a workshop confused about what just happened, the materials failed.
-**Current focus:** Phase 1 - Curriculum Foundation + Demo Infrastructure
+**Current focus:** Phase 2 - Workshop 2 Materials (LLM Fundamentals & Prompt Engineering)
 
 ## Current Position
 
-Phase: 1 of 6 (Curriculum Foundation + Demo Infrastructure)
+Phase: 2 of 6 (Workshop 2 Materials)
 Plan: 3 of 3 in current phase
-Status: All plans complete — awaiting verification
-Last activity: 2026-02-16 — Completed 01-03-PLAN.md (LLM Streaming Infrastructure)
+Status: Plan 02-03 complete
+Last activity: 2026-02-17 — Completed 02-03-PLAN.md (Notebook Polish & Display Utilities)
 
-Progress: [██░░░░░░░░] 17%
+Progress: [███░░░░░░░] 22%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3
-- Average duration: 8 min
-- Total execution time: 0.4 hours
+- Total plans completed: 5
+- Average duration: 7 min
+- Total execution time: 0.5 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01 | 3/3 | 25 min | 8 min |
+| 02 | 2/3 | 9 min | 4.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (5 min), 01-02 (5 min), 01-03 (15 min)
-- Trend: Consistent
+- Last 5 plans: 01-02 (5 min), 01-03 (15 min), 02-01 (4 min), 02-03 (5 min)
+- Trend: Accelerating
 
 *Updated after each plan completion*
 
@@ -54,6 +55,9 @@ Recent decisions affecting current work:
 - Streaming: Fetch-based SSE for OpenAI API (no openai npm package) — lightweight bundle
 - Streaming: useStreamingText hook as unified API for all demo streaming
 - Streaming: Hidden "live" keyboard toggle approved for instructor-only features
+- Display utils: IPython.display (HTML/Markdown) for notebook formatting -- zero external deps
+- Notebook pattern: H1 title, H2 parts, H3 sections, blockquote Key Insights
+- Exercise pattern: HTML <details> elements for collapsible solutions
 
 ### Pending Todos
 
@@ -67,6 +71,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-16 (phase execution)
-Stopped at: Phase 1 all plans complete, awaiting verification
+Last session: 2026-02-17 (phase execution)
+Stopped at: Completed 02-03-PLAN.md (Notebook Polish & Display Utilities)
 Resume file: None
