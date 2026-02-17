@@ -58,6 +58,8 @@ Recent decisions affecting current work:
 - Display utils: IPython.display (HTML/Markdown) for notebook formatting -- zero external deps
 - Notebook pattern: H1 title, H2 parts, H3 sections, blockquote Key Insights
 - Exercise pattern: HTML <details> elements for collapsible solutions
+- Demo migration: Copy logic verbatim from scratchpad, restyle with Card/Button/Badge + Tailwind
+- Per-demo Zustand store pattern in demos/src/demos/{name}/store/ directory
 
 ### Pending Todos
 
@@ -72,5 +74,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-17 (phase execution)
-Stopped at: Completed 02-03-PLAN.md (Notebook Polish & Display Utilities)
+Stopped at: Completed 02-01-PLAN.md (LLM Intuition N-gram Demo) and 02-03-PLAN.md
 Resume file: None
