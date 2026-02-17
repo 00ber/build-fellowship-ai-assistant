@@ -11,27 +11,27 @@ See: .planning/PROJECT.md (updated 2026-02-16)
 
 Phase: 2 of 6 (Workshop 2 Materials)
 Plan: 3 of 3 in current phase
-Status: Plan 02-03 complete
-Last activity: 2026-02-17 — Completed 02-03-PLAN.md (Notebook Polish & Display Utilities)
+Status: Phase 02 complete (all 3 plans done)
+Last activity: 2026-02-17 — Completed 02-02-PLAN.md (LLM Intuition Live Mode)
 
-Progress: [███░░░░░░░] 22%
+Progress: [████░░░░░░] 27%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 5
+- Total plans completed: 6
 - Average duration: 7 min
-- Total execution time: 0.5 hours
+- Total execution time: 0.6 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01 | 3/3 | 25 min | 8 min |
-| 02 | 2/3 | 9 min | 4.5 min |
+| 02 | 3/3 | 14 min | 4.7 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-02 (5 min), 01-03 (15 min), 02-01 (4 min), 02-03 (5 min)
+- Last 5 plans: 01-03 (15 min), 02-01 (4 min), 02-03 (5 min), 02-02 (5 min)
 - Trend: Accelerating
 
 *Updated after each plan completion*
@@ -60,6 +60,9 @@ Recent decisions affecting current work:
 - Exercise pattern: HTML <details> elements for collapsible solutions
 - Demo migration: Copy logic verbatim from scratchpad, restyle with Card/Button/Badge + Tailwind
 - Per-demo Zustand store pattern in demos/src/demos/{name}/store/ directory
+- Logprobs streaming: streamWithLogprobs with onToken callback and TokenData interface
+- Simulated fallback: pre-recorded token data with scenario matching for demo without API key
+- Token override: store pendingRestream flag triggers component-level re-stream with assistant prefix
 
 ### Pending Todos
 
@@ -74,5 +77,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-17 (phase execution)
-Stopped at: Completed 02-01-PLAN.md (LLM Intuition N-gram Demo) and 02-03-PLAN.md
+Stopped at: Completed 02-02-PLAN.md (LLM Intuition Live Mode) — Phase 02 fully complete
 Resume file: None
