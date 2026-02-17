@@ -19,19 +19,19 @@ Progress: [██░░░░░░░░] 11%
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
+- Total plans completed: 2
 - Average duration: 5 min
-- Total execution time: 0.1 hours
+- Total execution time: 0.2 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01 | 1/3 | 5 min | 5 min |
+| 01 | 2/3 | 10 min | 5 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (5 min)
-- Trend: Starting
+- Last 5 plans: 01-01 (5 min), 01-02 (5 min)
+- Trend: Consistent
 
 *Updated after each plan completion*
 
@@ -48,6 +48,9 @@ Recent decisions affecting current work:
 - Curriculum: Learning objectives derived from actual notebook content, not PLAN.md descriptions
 - Curriculum: Workshop 2 notebook covers prompt engineering + code generation loop (not just LLM basics)
 - Curriculum: Time allocations follow ~10-12 min demo, ~38-40 min notebook, ~10 min Q&A for teaching workshops
+- Demo infra: Hash-based routing for zero-dependency simplicity in demo shell
+- Demo infra: DemoRegistry pattern for adding demos (component file + registry entry)
+- Demo infra: Tailwind v3 (not v4) to match established scratchpad theme
 
 ### Pending Todos
 
@@ -62,5 +65,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-17 (plan execution)
-Stopped at: Completed 01-01-PLAN.md (Curriculum Documentation)
+Stopped at: Completed 01-02-PLAN.md (Demo App Shell)
 Resume file: None
