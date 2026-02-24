@@ -9,19 +9,19 @@ See: .planning/PROJECT.md (updated 2026-02-16)
 
 ## Current Position
 
-Phase: 3 of 6 (in progress)
-Plan: 1 of 2 complete in Phase 03
-Status: Phase 03 Plan 01 complete, Plan 02 next
-Last activity: 2026-02-24 — Completed 03-01 (Workshop 3 notebook Parts 1-4)
+Phase: 3 of 6 (complete)
+Plan: 2 of 2 complete in Phase 03
+Status: Phase 03 complete, Phase 04 next
+Last activity: 2026-02-24 — Completed 03-02 (Workshop 3 agent evolution v1-v4)
 
-Progress: [█████████░░░░░░░] 39%
+Progress: [███████████░░░░░] 44%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 7
-- Average duration: 6.3 min
-- Total execution time: 0.7 hours
+- Total plans completed: 8
+- Average duration: 6.8 min
+- Total execution time: 0.9 hours
 
 **By Phase:**
 
@@ -29,11 +29,11 @@ Progress: [█████████░░░░░░░] 39%
 |-------|-------|-------|----------|
 | 01 | 3/3 | 25 min | 8 min |
 | 02 | 3/3 | 14 min | 4.7 min |
-| 03 | 1/2 | 5 min | 5 min |
+| 03 | 2/2 | 15 min | 7.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-01 (4 min), 02-03 (5 min), 02-02 (5 min), 03-01 (5 min)
-- Trend: Consistent
+- Last 5 plans: 02-03 (5 min), 02-02 (5 min), 03-01 (5 min), 03-02 (10 min)
+- Trend: Consistent (03-02 longer due to complex notebook content)
 
 *Updated after each plan completion*
 
@@ -68,6 +68,10 @@ Recent decisions affecting current work:
 - W3 data: RESTAURANT_DESCRIPTIONS split across two cells to stay under 30-line cell limit
 - W3 tools: Case-insensitive lookup in tool functions to handle LLM casing inconsistency
 - W3 eval: Restricted namespace {"__builtins__": {}} for eval() of LLM-generated function calls
+- W3 agents: 4-version evolution (keyword -> LLM classify -> LLM tool select -> ReAct loop)
+- W3 context: Prompt visibility at steps 3-5 shows growing context without using "memory" vocabulary
+- W3 ReAct: Named pattern after v4 demonstrates it; Anthropic agent definition referenced
+- W3 bridge: Toy tools limitation motivates Workshop 4 real tool design
 
 ### Pending Todos
 
@@ -82,5 +86,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-24 (plan execution)
-Stopped at: Completed 03-01-PLAN.md (Workshop 3 Parts 1-4)
-Resume file: .planning/phases/03-workshop-3-materials/03-02-PLAN.md
+Stopped at: Completed 03-02-PLAN.md (Workshop 3 complete -- all 8 Parts)
+Resume file: Phase 04 next
