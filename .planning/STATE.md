@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-16)
 
 **Core value:** Every concept students encounter must be immediately intuitive — if a student leaves a workshop confused about what just happened, the materials failed.
-**Current focus:** Phase 3.1 complete - Workshop 3 Notebook Polish
+**Current focus:** Phase 3.2 complete - W3 Data Continuity
 
 ## Current Position
 
-Phase: 3.1 of 6 (complete)
-Plan: 1 of 1 complete in Phase 03.1
-Status: Phase 03.1 complete, Phase 04 next
-Last activity: 2026-02-24 — Completed 03.1-01 (W3 notebook discovery framing)
+Phase: 3.2 of 6 (complete)
+Plan: 1 of 1 complete in Phase 03.2
+Status: Phase 03.2 complete, Phase 04 next
+Last activity: 2026-02-24 — Completed 03.2-01 (W3 data continuity: extraction to agent tools)
 
-Progress: [████████████░░░░] 50%
+Progress: [█████████████░░░] 55%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 9
-- Average duration: 6.4 min
-- Total execution time: 1.0 hours
+- Total plans completed: 10
+- Average duration: 6.1 min
+- Total execution time: 1.05 hours
 
 **By Phase:**
 
@@ -31,10 +31,11 @@ Progress: [████████████░░░░] 50%
 | 02 | 3/3 | 14 min | 4.7 min |
 | 03 | 2/2 | 15 min | 7.5 min |
 | 03.1 | 1/1 | 3 min | 3 min |
+| 03.2 | 1/1 | 3 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-02 (5 min), 03-01 (5 min), 03-02 (10 min), 03.1-01 (3 min)
-- Trend: Consistent (03.1-01 fast -- narrative edits only, no code)
+- Last 5 plans: 03-01 (5 min), 03-02 (10 min), 03.1-01 (3 min), 03.2-01 (3 min)
+- Trend: Consistent (03.2-01 fast, surgical notebook edits)
 
 *Updated after each plan completion*
 
@@ -76,10 +77,15 @@ Recent decisions affecting current work:
 - W3 framing: Discovery arc with blend approach -- single "What if..." pivot + recurring micro-discoveries
 - W3 framing: ReAct naming withheld from v4 header, revealed as payoff after Reason/Act/Observe/Repeat buildup
 - W3 framing: Key Insight aha moments use "Did you notice..." questions; technical takeaways stay direct
+- W3 data continuity: Extraction results flow into agent tools via bridge cell (no narrator callout, implicit connection)
+- W3 extraction schema: cuisine, price_per_person_low/high, has_vegetarian, closing_time, notes (Pydantic model produces tool-ready formats)
+- W3 get_price_range: Numeric avg threshold (< 20 = $, < 40 = $$, else $$$) replaces hardcoded string lookup
+- W3 formatting: All double dashes removed from notebook, replaced with contextual punctuation
 
 ### Roadmap Evolution
 
 - Phase 3.1 inserted after Phase 3: W3 Notebook Polish: Discovery Framing (URGENT) — restore "What if..." pedagogical arc to W3 notebook
+- Phase 3.2 inserted after Phase 3: W3 Data Continuity: Connect structured extraction to agent tools (URGENT) — Part 3 extraction results should feed into Part 4+ agent tools instead of hardcoded RESTAURANTS/WAIT_TIMES dicts
 
 ### Pending Todos
 
@@ -94,5 +100,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-24 (execute-phase)
-Stopped at: Completed 03.1-01-PLAN.md (Phase 03.1 complete)
-Resume file: .planning/phases/03.1-w3-notebook-polish-discovery-framing/03.1-01-SUMMARY.md
+Stopped at: Completed 03.2-01-PLAN.md (Phase 03.2 complete)
+Resume file: .planning/phases/03.2-w3-data-continuity-connect-structured-extraction-to-agent-tools/03.2-01-SUMMARY.md
