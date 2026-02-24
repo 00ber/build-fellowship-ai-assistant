@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-16)
 
 **Core value:** Every concept students encounter must be immediately intuitive — if a student leaves a workshop confused about what just happened, the materials failed.
-**Current focus:** Phase 3 - Workshop 3 Materials (Agent Foundations)
+**Current focus:** Phase 3.1 complete - Workshop 3 Notebook Polish
 
 ## Current Position
 
-Phase: 3 of 6 (complete)
-Plan: 2 of 2 complete in Phase 03
-Status: Phase 03 complete, Phase 04 next
-Last activity: 2026-02-24 — Completed 03-02 (Workshop 3 agent evolution v1-v4)
+Phase: 3.1 of 6 (complete)
+Plan: 1 of 1 complete in Phase 03.1
+Status: Phase 03.1 complete, Phase 04 next
+Last activity: 2026-02-24 — Completed 03.1-01 (W3 notebook discovery framing)
 
-Progress: [███████████░░░░░] 44%
+Progress: [████████████░░░░] 50%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 8
-- Average duration: 6.8 min
-- Total execution time: 0.9 hours
+- Total plans completed: 9
+- Average duration: 6.4 min
+- Total execution time: 1.0 hours
 
 **By Phase:**
 
@@ -30,10 +30,11 @@ Progress: [███████████░░░░░] 44%
 | 01 | 3/3 | 25 min | 8 min |
 | 02 | 3/3 | 14 min | 4.7 min |
 | 03 | 2/2 | 15 min | 7.5 min |
+| 03.1 | 1/1 | 3 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-03 (5 min), 02-02 (5 min), 03-01 (5 min), 03-02 (10 min)
-- Trend: Consistent (03-02 longer due to complex notebook content)
+- Last 5 plans: 02-02 (5 min), 03-01 (5 min), 03-02 (10 min), 03.1-01 (3 min)
+- Trend: Consistent (03.1-01 fast -- narrative edits only, no code)
 
 *Updated after each plan completion*
 
@@ -72,6 +73,13 @@ Recent decisions affecting current work:
 - W3 context: Prompt visibility at steps 3-5 shows growing context without using "memory" vocabulary
 - W3 ReAct: Named pattern after v4 demonstrates it; Anthropic agent definition referenced
 - W3 bridge: Toy tools limitation motivates Workshop 4 real tool design
+- W3 framing: Discovery arc with blend approach -- single "What if..." pivot + recurring micro-discoveries
+- W3 framing: ReAct naming withheld from v4 header, revealed as payoff after Reason/Act/Observe/Repeat buildup
+- W3 framing: Key Insight aha moments use "Did you notice..." questions; technical takeaways stay direct
+
+### Roadmap Evolution
+
+- Phase 3.1 inserted after Phase 3: W3 Notebook Polish: Discovery Framing (URGENT) — restore "What if..." pedagogical arc to W3 notebook
 
 ### Pending Todos
 
@@ -85,6 +93,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-24 (plan execution)
-Stopped at: Completed 03-02-PLAN.md (Workshop 3 complete -- all 8 Parts)
-Resume file: Phase 04 next
+Last session: 2026-02-24 (execute-phase)
+Stopped at: Completed 03.1-01-PLAN.md (Phase 03.1 complete)
+Resume file: .planning/phases/03.1-w3-notebook-polish-discovery-framing/03.1-01-SUMMARY.md
