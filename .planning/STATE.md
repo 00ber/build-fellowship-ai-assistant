@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-16)
 
 **Core value:** Every concept students encounter must be immediately intuitive — if a student leaves a workshop confused about what just happened, the materials failed.
-**Current focus:** Phase 2 - Workshop 2 Materials (LLM Fundamentals & Prompt Engineering)
+**Current focus:** Phase 3 - Workshop 3 Materials (Agent Foundations)
 
 ## Current Position
 
-Phase: 2 of 6 complete, Phase 3 next
-Plan: All plans in Phase 1 & 2 done
-Status: Phases 01 & 02 complete, ready for Phase 03
-Last activity: 2026-02-24 — Marked Phase 01 complete (Workshop 2 delivered successfully)
+Phase: 3 of 6 (in progress)
+Plan: 1 of 2 complete in Phase 03
+Status: Phase 03 Plan 01 complete, Plan 02 next
+Last activity: 2026-02-24 — Completed 03-01 (Workshop 3 notebook Parts 1-4)
 
-Progress: [████████░░░░░░░░] 33%
+Progress: [█████████░░░░░░░] 39%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 6
-- Average duration: 7 min
-- Total execution time: 0.6 hours
+- Total plans completed: 7
+- Average duration: 6.3 min
+- Total execution time: 0.7 hours
 
 **By Phase:**
 
@@ -29,10 +29,11 @@ Progress: [████████░░░░░░░░] 33%
 |-------|-------|-------|----------|
 | 01 | 3/3 | 25 min | 8 min |
 | 02 | 3/3 | 14 min | 4.7 min |
+| 03 | 1/2 | 5 min | 5 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-03 (15 min), 02-01 (4 min), 02-03 (5 min), 02-02 (5 min)
-- Trend: Accelerating
+- Last 5 plans: 02-01 (4 min), 02-03 (5 min), 02-02 (5 min), 03-01 (5 min)
+- Trend: Consistent
 
 *Updated after each plan completion*
 
@@ -63,6 +64,10 @@ Recent decisions affecting current work:
 - Logprobs streaming: streamWithLogprobs with onToken callback and TokenData interface
 - Simulated fallback: pre-recorded token data with scenario matching for demo without API key
 - Token override: store pendingRestream flag triggers component-level re-stream with assistant prefix
+- W3 scenario: Restaurant Finder replaces ER Hospital (6 restaurants with structured + unstructured data)
+- W3 data: RESTAURANT_DESCRIPTIONS split across two cells to stay under 30-line cell limit
+- W3 tools: Case-insensitive lookup in tool functions to handle LLM casing inconsistency
+- W3 eval: Restricted namespace {"__builtins__": {}} for eval() of LLM-generated function calls
 
 ### Pending Todos
 
@@ -76,6 +81,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-24 (phase context)
-Stopped at: Phase 3 context gathered
-Resume file: .planning/phases/03-workshop-3-materials/03-CONTEXT.md
+Last session: 2026-02-24 (plan execution)
+Stopped at: Completed 03-01-PLAN.md (Workshop 3 Parts 1-4)
+Resume file: .planning/phases/03-workshop-3-materials/03-02-PLAN.md
